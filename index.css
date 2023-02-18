@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+.hover-text {
+  justify-content: center;
+  position: absolute;
+  color: white;
+  opacity: 0;
+}
+
+/* .hover-text:hover {
+  opacity: 1;
+} */
+
+.logo:hover {
+  filter: blur(0.2rem);
+}
+
+.hover-text:hover .game {
+  filter: blur(0.2rem);
+}
+
+.game:hover .hover-text {
+  filter: blur(0rem);
+  opacity: 1;
+}
