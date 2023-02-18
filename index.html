@@ -11,6 +11,7 @@
     <h1 class="text-3xl font-extrabold tracking-widest">
       Most Famous Game Soundtracks
     </h1>
+    <h2>Double Click To Pause Soundtrack</h2>
 
     <div
       class="flex p-8 flex-col md:flex-row justify-center md:justify-start md:gap-x-4 gap-y-4 items-center"
@@ -20,12 +21,32 @@
       >
         <img class="group-hover:blur-[1px] rounded-md" src="mc logo.jpeg" />
 
-        <p
+        <button
+          id="playMinecraft"
           class="absolute text-white text-2xl font-bold hidden group-hover:block"
         >
           Play
-        </p>
+        </button>
+
+        <script>
+          let playMinecraft = document.getElementById("playMinecraft");
+          let audio = new Audio("Sweden.mp3");
+          function togglePlay() {
+            audio.currentTime = 0;
+            audio.play();
+            playMinecraft.innerText = "Pause";
+          }
+
+          function togglePause() {
+            audio.pause();
+            playMinecraft.innerText = "Play";
+          }
+
+          playMinecraft.addEventListener("click", togglePlay);
+          playMinecraft.addEventListener("dblclick", togglePause);
+        </script>
       </div>
+
       <div
         class="w-48 h-48 flex justify-center items-center group shadow-2xl hover:scale-110 transition-all"
       >
@@ -34,12 +55,34 @@
           src="eft_logo_promo.jpg"
         />
 
-        <p
+        <button
+          id="playTarkov"
           class="absolute text-white text-2xl font-bold hidden group-hover:block"
         >
           Play
-        </p>
+        </button>
+
+        <script>
+          let playTarkov = document.getElementById("playTarkov");
+          let audioTarkov = new Audio(
+            "Escape from Tarkov - main music theme.mp3"
+          );
+          function togglePlay() {
+            audioTarkov.currentTime = 0;
+            audioTarkov.play();
+            playTarkov.innerText = "Pause";
+          }
+
+          function togglePause() {
+            audioTarkov.pause();
+            playTarkov.innerText = "Play";
+          }
+
+          playTarkov.addEventListener("click", togglePlay);
+          playTarkov.addEventListener("dblclick", togglePause);
+        </script>
       </div>
+
       <div
         class="w-48 h-48 flex justify-center items-center group shadow-2xl hover:scale-110 transition-all"
       >
@@ -48,11 +91,67 @@
           src="hollow knight.jpeg"
         />
 
-        <p
+        <button
+          id="playHK"
           class="absolute text-white text-2xl font-bold hidden group-hover:block"
         >
           Play
-        </p>
+        </button>
+
+        <script>
+          let playHK = document.getElementById("playHK");
+          let audioHK = new Audio("Hollow Knight OST - Enter Hallownest.mp3");
+          function togglePlay() {
+            audioHK.currentTime = 0;
+            audioHK.play();
+            playHK.innerText = "Pause";
+          }
+
+          function togglePause() {
+            audioHK.pause();
+            playHK.innerText = "Play";
+          }
+
+          playHK.addEventListener("click", togglePlay);
+          playHK.addEventListener("dblclick", togglePause);
+        </script>
+      </div>
+
+      <div
+        class="w-48 h-48 flex justify-center items-center group shadow-2xl hover:scale-110 transition-all"
+      >
+        <img
+          class="w-full h-full group-hover:blur-[1px] rounded-md"
+          src="download.jpeg"
+        />
+
+        <button
+          id="playBloodborne"
+          class="absolute text-white text-2xl font-bold hidden group-hover:block"
+        >
+          Play
+        </button>
+
+        <script>
+          let playBloodborne = document.getElementById("playBloodborne");
+          let audioBloodborne = new Audio(
+            "Bloodborne Soundtrack OST - Gehrman, The First Hunter.mp3"
+          );
+
+          function togglePlay() {
+            audioBloodborne.currentTime = 0;
+            audioBloodborne.play();
+            playBloodborne.innerText = "Pause";
+          }
+
+          function togglePause() {
+            audioBloodborne.pause();
+            playBloodborne.innerText = "Play";
+          }
+
+          playBloodborne.addEventListener("click", togglePlay);
+          playBloodborne.addEventListener("dblclick", togglePause);
+        </script>
       </div>
     </div>
   </body>
